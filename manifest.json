@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Flow",
+  "version": "1.0",
+  "description": "Track your browsing time, stay focused, and improve productivity.",
+  "permissions": ["tabs", "storage", "alarms", "notifications","activeTab"],
+  "background": {
+    "service_worker": "/background.js"
+  },
+  "action": {
+    "default_popup": "/popup.html",
+    "default_icon": {
+     "16": "/icon16.png",
+    "48": "/image48.png",
+    "128": "/image128.png"
+     
+     
+    }
+  },
+  "icons": {
+    "16": "/icon16.png",
+    "48": "/image48.png",
+    "128": "/image128.png"
+   
+  }
+}
+
+
+
+
+ 
+

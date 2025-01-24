@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+  <title>Focus Flow</title>
+</head>
+<body>
+  <h1>Focus Flow</h1>
+
+  <div id="google-search">
+    <h3>Google Search</h3>
+    <input type="text" id="search-query" placeholder="Type your query">
+    <button id="search-button">Search</button>
+  </div>
+  
+  <div id="tracking-summary">
+    <h3>Tracking Summary</h3>
+    <button id="reset-summary-button" style="float: right; margin-top: -30px;">Reset</button>
+    <ul id="summary-list"></ul>
+  </div>
+  
+  <div id="recommendations">
+    <h3>Recommended for Blocking</h3>
+    <ul id="recommended-list"></ul>
+  </div>
+
+  <div id="focus-mode">
+    <h3>Focus Mode</h3>
+    <input type="checkbox" id="focus-toggle">
+    <label for="focus-toggle">Enable Focus Mode</label>
+  </div>
+  
+  <div id="to-do">
+    <h3>To-Do List</h3>
+    <input type="text" id="new-task" placeholder="Add a new task">
+    <button id="add-task">Add</button>
+    <ul id="task-list"></ul>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

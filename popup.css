@@ -1,0 +1,144 @@
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  padding: 0;
+  width: 300px;
+  border-radius: 12px;
+  background-color: #f4f4f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1 {
+  font-size: 20px;
+  text-align: center;
+  color: #3f51b5;
+  margin-bottom: 20px;
+}
+
+/* Section styling */
+#tracking-summary, #focus-mode, #to-do {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* List styling */
+#summary-list, #task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Button styling */
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+/* Google search section */
+#google-search {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#search-query {
+  width: 60%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+#search-button {
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #388e3c;
+}
+
+/* Reset button styling */
+#reset-summary-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#reset-summary-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Add more color accents to hover effects */
+button, #search-button, #reset-summary-button {
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+button:hover, #search-button:hover, #reset-summary-button:hover {
+  transform: scale(1.05);
+}
+/* Button for 'Done' (Remove) */
+.remove-button {
+  margin-left: 155px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Button for 'To-Do' task */
+#to-do {
+  padding: 8px 15px;  /* Increased padding for better button sizing */
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ffffff;  /* Green background */
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+ 
+  
+}
+
+#new-task{
+  width: 60%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
