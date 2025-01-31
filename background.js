@@ -4,13 +4,29 @@ let focusMode = false;
 let activeTabId = null;
 let intervalId = null;
 
+const excludedDomains = [
+  "linkedin.com",
+  "github.com",
+  "trello.com",
+  "slack.com",
+  "notion.so",
+  "whatsapp.com",
+  "mail.google.com",
+  "outlook.live.com",
+  "coursera.org",
+  "udemy.com",
+  "khanacademy.org",
+  "stackoverflow.com",
+  "gitlab.com"
+];
+
 // Load data from storage
 chrome.storage.sync.get(["blockedSites", "trackingData", "focusMode"], (data) => {
   blockedSites = data.blockedSites || [];
 
   // Ensure WhatsApp Web is always blocked
-  if (!blockedSites.includes('web.whatsapp.com')) {
-    blockedSites.push('web.whatsapp.com');
+  if (!blockedSites.includes("web.whatsapp.com")) {
+    blockedSites.push("web.whatsapp.com");
   }
 
   trackingData = data.trackingData || {};
@@ -74,18 +90,19 @@ chrome.tabs.onActivated.addListener((activeInfo) => {
 
 // Recommend blocked sites based on browsing data
 function recommendBlockedSites() {
-  const threshold = 10; // 5 minutes
+  const threshold = 5; // 5 minutes threshold
   const distractingSites = [];
 
   for (const [site, time] of Object.entries(trackingData)) {
-    if (time > threshold) {
+    const normalizedSite = site.replace(/^www\./, ""); // Remove "www." before checking exclusion
+
+    if (time > threshold && !excludedDomains.includes(normalizedSite)) {
       distractingSites.push(site);
     }
   }
 
   chrome.runtime.sendMessage({ type: "recommendBlockedSites", sites: distractingSites });
 }
-
 // Reset tracking data
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "resetTrackingData") {
