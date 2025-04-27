@@ -3,30 +3,25 @@
   "name": "Focus Flow",
   "version": "1.0",
   "description": "Track your browsing time, stay focused, and improve productivity.",
-  "permissions": ["tabs", "storage", "alarms", "notifications","activeTab"],
+  "permissions": ["tabs", "storage", "alarms", "notifications", "activeTab"],
   "background": {
-    "service_worker": "/background.js"
+    "service_worker": "background.js"
   },
+  "web_accessible_resources": [{
+    "resources": ["decision_tree.json"],
+    "matches": ["<all_urls>"]
+  }],
   "action": {
-    "default_popup": "/popup.html",
+    "default_popup": "popup.html",
     "default_icon": {
-     "16": "/icon16.png",
-    "48": "/image48.png",
-    "128": "/image128.png"
-     
-     
+      "16": "icon16.png",
+      "48": "image48.png",
+      "128": "image128.png"
     }
   },
   "icons": {
-    "16": "/icon16.png",
-    "48": "/image48.png",
-    "128": "/image128.png"
-   
+    "16": "icon16.png",
+    "48": "image48.png",
+    "128": "image128.png"
   }
 }
-
-
-
-
- 
-
